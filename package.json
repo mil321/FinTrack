@@ -1,71 +1,73 @@
 {
-  "name": "FinTrack",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+  "_from": "wcwidth@^1.0.1",
+  "_id": "wcwidth@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g=",
+  "_location": "/wcwidth",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "wcwidth@^1.0.1",
+    "name": "wcwidth",
+    "escapedName": "wcwidth",
+    "rawSpec": "^1.0.1",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.1"
   },
-  "private": true,
-  "dependencies": {
-    "@angular/common": "~10.0.0",
-    "@angular/core": "~10.0.0",
-    "@angular/fire": "^6.1.4",
-    "@angular/forms": "~10.0.0",
-    "@angular/platform-browser": "~10.0.0",
-    "@angular/platform-browser-dynamic": "~10.0.0",
-    "@angular/router": "~10.0.0",
-    "@ionic-native/calendar": "^5.31.1",
-    "@ionic-native/core": "^5.0.0",
-    "@ionic-native/status-bar": "^5.0.0",
-    "@ionic/angular": "^5.0.0",
-    "chart.js": "^2.9.4",
-    "firebase": "^8.2.6",
-    "ion2-calendar": "^3.0.0-rc.0",
-    "ionic-theme-switcher": "^1.0.4",
-    "ionic2-calendar": "^0.6.6",
-    "lodash": "^4.17.21",
-    "moment": "^2.29.1",
-    "rxjs": "~6.5.5",
-    "tslib": "^2.0.0",
-    "zone.js": "~0.10.3"
+  "_requiredBy": [
+    "/ora"
+  ],
+  "_resolved": "https://registry.npmjs.org/wcwidth/-/wcwidth-1.0.1.tgz",
+  "_shasum": "f0b0dcf915bc5ff1528afadb2c0e17b532da2fe8",
+  "_spec": "wcwidth@^1.0.1",
+  "_where": "C:\\Users\\user\\Desktop\\FinTrack\\node_modules\\ora",
+  "author": {
+    "name": "Tim Oxley"
   },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1101.1",
-    "@angular/cli": "~10.0.5",
-    "@angular/compiler": "~10.0.0",
-    "@angular/compiler-cli": "~10.0.0",
-    "@angular/language-service": "~10.0.0",
-    "@ionic/angular-toolkit": "^2.3.0",
-    "@ionic/lab": "3.2.10",
-    "@types/jasmine": "~3.5.0",
-    "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^12.11.1",
-    "codelyzer": "^6.0.0",
-    "cordova-plugin-calendar": "^5.1.5",
-    "cordova-plugin-splashscreen": "^5.0.2",
-    "jasmine-core": "~3.5.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~5.0.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage-istanbul-reporter": "~3.0.2",
-    "karma-jasmine": "~3.3.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
-    "protractor": "~7.0.0",
-    "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
-    "typescript": "~3.9.5"
+  "bugs": {
+    "url": "https://github.com/timoxley/wcwidth/issues"
   },
-  "description": "An Ionic project",
-  "cordova": {
-    "plugins": {
-      "cordova-plugin-splashscreen": {},
-      "cordova-plugin-calendar": {}
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Woong Jun",
+      "email": "woong.jun@gmail.com",
+      "url": "http://code.woong.org/"
     }
-  }
+  ],
+  "dependencies": {
+    "defaults": "^1.0.3"
+  },
+  "deprecated": false,
+  "description": "Port of C's wcwidth() and wcswidth()",
+  "devDependencies": {
+    "tape": "^4.5.1"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "homepage": "https://github.com/timoxley/wcwidth#readme",
+  "keywords": [
+    "wide character",
+    "wc",
+    "wide character string",
+    "wcs",
+    "terminal",
+    "width",
+    "wcwidth",
+    "wcswidth"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "wcwidth",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timoxley/wcwidth.git"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "version": "1.0.1"
 }
