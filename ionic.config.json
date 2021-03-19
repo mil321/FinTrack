@@ -1,0 +1,7 @@
+{
+  "name": "FinTrack",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
