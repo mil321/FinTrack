@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+  <ion-img src="assets/FinTrack.png"></ion-img>
+  <div class="ion-padding">
+    <ion-card color="secondary" class="ion-padding" size="12">
+      <ion-item color="secondary">
+        <ion-label position="floating">Name</ion-label>
+        <ion-input type="text" [(ngModel)]="user.name"></ion-input>
+      </ion-item>
+    
+      <ion-item color="secondary">
+        <ion-label position="floating">Phone Number</ion-label>
+        <ion-input type="tel" [(ngModel)]="user.no_tel"></ion-input>
+      </ion-item>
+    
+      <ion-item color="secondary">
+        <ion-label position="floating" >Email</ion-label>
+        <ion-input type="email" [(ngModel)]="user.email" required></ion-input>
+      </ion-item>
+    
+      <ion-item color="secondary">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="user.password" required></ion-input>
+      </ion-item>
+    
+      <ion-button 
+      expand="block" 
+      fill="solid"
+      color="primary"
+      (click)="register(user)">
+      REGISTER
+    </ion-button>
+    
+    <ion-item color="secondary">
+      <ion-label>Already has account?</ion-label>
+      <ion-button expand="block" fill="clear" [routerLink]="['/login']" routerLinkActive="router-link-active" >
+        Login
+      </ion-button>
+    </ion-item>
+    
+    </ion-card>
+  </div>
+
+</ion-content>

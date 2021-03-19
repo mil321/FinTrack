@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]=true padding class="background">
+
+  <ion-card color="tertiary">
+    <ion-img src="assets/suze.jpeg" width=100%></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>Suze Orman</ion-card-subtitle>
+      <ion-card-title>Quotes</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      "A big part of Financial Freedom is having your heart and mind free from worry about the What-ifs of life"
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="secondary">
+    <ion-img src="assets/income.jpeg" width="100%"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>What is finance?</ion-card-subtitle>
+      <ion-card-title>Finance</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Finance is defined as the management of money and includes activities such as investing, borrowing, lending, budgeting, saving, and forecasting.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="medium">
+    <video
+    width="100%"
+    controls="controls"
+    preload="metadata"
+    autoplay="autoplay"
+    webkit-playsinline="webkit-playsinline"
+    >
+    <source src="assets/money.mp4" type="video/mp4" />
+    </video>
+    <ion-card-content>
+      <h2>Money or time?</h2>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['/add']" routerLinkActive="router-link-active">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+  <ion-card color="light" [routerLink]="['/account']" routerLinkActive="router-link-active" >
+    <ion-card-header>
+      <ion-card-subtitle>How much your savinsgs today?</ion-card-subtitle>
+      <ion-card-title>ACCOUNT</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>

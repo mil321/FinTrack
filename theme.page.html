@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center"> 
+    <ion-title>Theme</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Dark Theme</ion-label>
+    <ion-toggle (ionChange)='toggleTheme(event)' ></ion-toggle>
+  </ion-item>
+</ion-content>
