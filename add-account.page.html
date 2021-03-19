@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Add Account</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="add"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]=true padding class="background">
+  <div class="ion-padding">
+    <ion-card>
+      <ion-item>
+        <ion-label>Account</ion-label>
+        <ion-select value="account" placeholder="Select Bank" [(ngModel)]="bank.account">
+          <ion-select-option value="Maybank">Maybank</ion-select-option>
+          <ion-select-option value="Bank Islam">Bank Islam</ion-select-option>
+          <ion-select-option value="Cimb Bank">Cimb Bank</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Amount</ion-label>
+        <ion-input type="number" placeholder="0" [(ngModel)]="bank.amount">RM </ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-input type="date" [(ngModel)]="bank.date"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Note</ion-label>
+        <ion-input type="text" [(ngModel)]="bank.note"></ion-input>
+      </ion-item>
+  
+      <ion-button (click)="createBank(bank)" expand="block" fill="solid" shape="default">
+        SAVE
+      </ion-button>
+  
+    </ion-card>
+  </div>
+    
+  <!-- <ion-label>
+    <h2>Choose your bank</h2>
+  </ion-label>
+
+  <ion-card [routerLink]="['/ambank']" routerLinkActive="router-link-active" size=50%>
+    <ion-img src="assets/am.png"></ion-img>
+  </ion-card>
+
+  <ion-card [routerLink]="['/islam']" routerLinkActive="router-link-active" >
+    <ion-img src="assets/bankislam.png"></ion-img>
+  </ion-card>
+
+  <ion-card [routerLink]="['/rakyat']" routerLinkActive="router-link-active" >
+    <ion-img src="assets/bankrakyat.png"></ion-img>
+  </ion-card>
+
+  <ion-card [routerLink]="['/bnm']" routerLinkActive="router-link-active" size=50%>
+    <ion-img src="assets/bnm.png"></ion-img>
+  </ion-card>
+
+  <ion-card [routerLink]="['/bsn']" routerLinkActive="router-link-active" >
+    <ion-img src="assets/BSN.png"></ion-img>
+  </ion-card>
+
+  <ion-card [routerLink]="['/cimb']" routerLinkActive="router-link-active" size=50%>
+    <ion-img src="assets/cimb.png"></ion-img>
+  </ion-card>
+
+  <ion-card [routerLink]="['/maybank']" routerLinkActive="router-link-active" >
+    <ion-img src="assets/maybank.png"></ion-img>
+  </ion-card>
+
+  <ion-card [routerLink]="['/rhb']" routerLinkActive="router-link-active" >
+    <ion-img src="assets/rhb.png"></ion-img>
+  </ion-card> -->
+
+</ion-content>

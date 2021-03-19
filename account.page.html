@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Account</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen] =true padding class="background">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary" [routerLink]="['/add-account']" routerLinkActive="router-link-active" >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-card *ngFor="let bank of banks" >
+    <ion-card-header>
+      <ion-card-subtitle>{{ bank.account }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>RM {{ bank.amount }}</p>
+      <p>{{ bank.date }}</p>
+      <p>{{ bank.note }}</p>
+    </ion-card-content>
+    
+    <ion-button (click)="deleteBank(bank.id)" expand="block" fill="clear" >
+      DELETE
+    </ion-button>
+    <ion-button [routerLink]="['/edit-account', bank.id]" routerLinkActive="router-link-active" fill="clear" expand="block">
+      EDIT
+    </ion-button>
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Copyright 2021</ion-title>
+  </ion-toolbar>
+</ion-footer>

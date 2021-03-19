@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center"> 
+    <ion-title>Add</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]=true padding class="background">
+<div>
+  <ion-card color="primary" [routerLink]="['/add-income']" routerLinkActive="router-link-active" >
+    <ion-card-header>
+      <ion-card-subtitle>Income</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Record your income
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="primary" [routerLink]="['/add-expenses']" routerLinkActive="router-link-active" >
+    <ion-card-header>
+      <ion-card-subtitle>Expenses</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      You can write your expenses daily
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="primary" [routerLink]="['/add-commit']" routerLinkActive="router-link-active" >
+    <ion-card-header>
+      <ion-card-subtitle>Commitment</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Write your commitment now
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="primary" [routerLink]="['/add-debt']" routerLinkActive="router-link-active" >
+    <ion-card-header>
+      <ion-card-subtitle>Debt</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      You can record your debt
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="primary" [routerLink]="['/add-notes']" routerLinkActive="router-link-active" >
+    <ion-card-header>
+      <ion-card-subtitle>Notes</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      You can write your notes here
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Copyright</ion-title>
+  </ion-toolbar>
+</ion-footer>

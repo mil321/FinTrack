@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <ion-title>Add Expenses</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]=true padding class="background">
+  <div class="ion-padding">
+    <ion-card>
+      
+  <ion-item>
+    <ion-label position="floating">Expense</ion-label>
+    <ion-input type="text" [(ngModel)]="expense.expense"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Category</ion-label>
+    <ion-select value="category" okText="Okay" [(ngModel)]="expense.category">
+      <ion-select-option value="food">Food</ion-select-option>
+      <ion-select-option value="groceries">Grocery</ion-select-option>
+      <ion-select-option value="household">Household</ion-select-option>
+      <ion-select-option value="beauty">Beauty</ion-select-option>
+      <ion-select-option value="health">Health</ion-select-option>
+      <ion-select-option value="education">Education</ion-select-option>
+      <ion-select-option value="transportation">Transportation</ion-select-option>
+      <ion-select-option value="clothing">Clothing</ion-select-option>
+      <ion-select-option value="gift">Gift</ion-select-option>
+      <ion-select-option value="fitness">Fitness</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label >Amount</ion-label>
+    <ion-input type="number" placeholder="0" [(ngModel)]="expense.amount">RM</ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label >Date</ion-label>
+    <ion-input type="date" [(ngModel)]="expense.date"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Note</ion-label>
+    <ion-input type="text" [(ngModel)]="expense.note"></ion-input>
+  </ion-item>
+  
+  <ion-button (click)="createExpense(expense)" expand="block" fill="solid" color="primary" shape="default">
+    SAVE
+  </ion-button>
+      
+    </ion-card>
+  </div>
+
+</ion-content>

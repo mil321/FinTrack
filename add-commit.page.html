@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Add Commitment</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]=true padding class="background">
+  <div class="ion-padding" >
+
+    <ion-card>
+      <ion-item>
+        <ion-label position="floating">Commitment</ion-label>
+        <ion-input type="text" [(ngModel)]="post.commitment" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Enquire Type</ion-label>
+        <ion-select value="General" okText="Okay" [(ngModel)]="post.enquiry" cancelText="Dismiss">
+          <ion-select-option value="Important">Important</ion-select-option>
+          <ion-select-option value="General">General</ion-select-option>
+          <ion-select-option value="Not important">Not important</ion-select-option>
+          <ion-select-option value="Urgent">Urgent</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Allocation</ion-label>
+        <ion-input type="number" [(ngModel)]="post.allocation" placeholder="0">RM </ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label >Date</ion-label>
+        <ion-input type="date" [(ngModel)]="post.date"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Billing Rate</ion-label>
+        <ion-select value="General" okText="Okay" [(ngModel)]="post.rate" cancelText="Dismiss">
+          <ion-select-option value="Once a month">Once a month</ion-select-option>
+          <ion-select-option value="Twice a month">Twice a month</ion-select-option>
+          <ion-select-option value="Thrice a month">Thrice a month</ion-select-option>
+          <ion-select-option value="Every week">Every week</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-button (click)="createPost(post)" expand="block" fill="solid" shape="default" color="primary">
+        SAVE
+      </ion-button>
+    </ion-card>
+
+  </div>
+
+</ion-content>

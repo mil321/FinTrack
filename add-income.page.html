@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Add Income</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" padding class="background">
+  <div class="ion-padding">
+    <ion-card>
+      <ion-item>
+        <ion-label position="floating">Income</ion-label>
+        <ion-input type="text" [(ngModel)]="income.income"></ion-input>
+      </ion-item>
+    
+        <ion-item>
+          <ion-label>Category</ion-label>
+          <ion-select value="category" [(ngModel)]="income.category">
+            <ion-select-option value="Salary">Salary</ion-select-option>
+            <ion-select-option value="Business">Business</ion-select-option>
+            <ion-select-option value="Allowance">Allowance</ion-select-option>
+            <ion-select-option value="Bonus">Bonus</ion-select-option>
+            <ion-select-option value="Other">Other</ion-select-option>
+          </ion-select>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating">Amount</ion-label>
+          <ion-input type="number" placeholder=" 0" [(ngModel)]="income.amount">RM</ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Date</ion-label>
+          <ion-input type="date" [(ngModel)]="income.date"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Rate</ion-label>
+          <ion-select value="rate" placeholder="-Select-" [(ngModel)]="income.rate">
+            <ion-select-option value="Once a month">Every month</ion-select-option>
+            <ion-select-option value="Twice a month">Twice a month</ion-select-option>
+            <ion-select-option value="Every week">Every week</ion-select-option>
+            <ion-select-option value="Once">Once</ion-select-option>
+          </ion-select>
+        </ion-item>
+    
+        <ion-button (click)="createIncome(income)" expand="block" fill="solid" color="primary" shape="default">
+          Save
+        </ion-button>  
+    </ion-card>
+ 
+  </div>
+</ion-content>

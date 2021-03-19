@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <ion-title>Add Notes</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]=true padding class="background">
+  <div class="ion-padding">
+    <ion-card>
+      <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-input type="date" [(ngModel)]="note.date"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Notes</ion-label>
+        <ion-textarea type="text" [(ngModel)]="note.note" rows=7></ion-textarea>
+      </ion-item>
+  
+      <ion-button (click)="createNote(note)" expand="block" fill="solid" color="primary" shape="default">
+        SAVE
+      </ion-button>
+  
+    </ion-card>
+  </div>
+
+</ion-content>
