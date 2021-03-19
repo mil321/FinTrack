@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Edit Account</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]=true padding class="background">
+  <ion-item>
+    <ion-label>Account</ion-label>
+    <ion-select value="account" placeholder="Select Bank" [(ngModel)]="bank.account" required>
+      <ion-select-option value="Maybank">Maybank</ion-select-option>
+      <ion-select-option value="Bank Islam">Bank Islam</ion-select-option>
+      <ion-select-option value="Cimb Bank">Cimb Bank</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Amount</ion-label>
+    <ion-input type="number" placeholder="0" [(ngModel)]="bank.amount" required>RM </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-input type="date" [(ngModel)]="bank.date" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Note</ion-label>
+    <ion-input type="text" [(ngModel)]="bank.note" required></ion-input>
+  </ion-item>
+
+  <ion-button (click)="updateBank(bank)" expand="block" fill="clear" shape="default">
+    UPDATE
+  </ion-button>
+</ion-content>

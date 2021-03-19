@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <ion-title>FAQ</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+  <div class="ion-padding">
+    <p>FREQUENTLY ASKED QUESTION</p>
+    <ion-item color="secondary" >
+      <ion-label (click)="first()">Question 1: How can i add expenses?</ion-label>
+      <ion-item *ngIf="first_section">
+        <p color="secondary">
+          Tap on the icon add (+) and tap on card name 'Expenses'.
+          You will go to Expenses page
+        </p>
+      </ion-item>
+    </ion-item>
+
+    <ion-item color="secondary" >
+      <ion-label (click)="second()">Question 2: Do you store all the history? </ion-label>
+      <ion-item *ngIf="second_section">
+        <p color="secondary">
+          Yes. We store all your financial history until you delete them manually.
+        </p>
+      </ion-item>
+    </ion-item>
+
+    <ion-item color="secondary" >
+      <ion-label (click)="third()">Question 3: Can I edit my expenses or income if there any changes?</ion-label>
+      <ion-item *ngIf="third_section">
+        <p color="secondary">
+          Of course. You can edit your details in account, expenses, income, debt and note due to your own changes.
+        </p>
+      </ion-item>
+    </ion-item>
+  </div>
+</ion-content>

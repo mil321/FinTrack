@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Edit Expenses</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="expenses"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]=true padding class="background">
+  <ion-item>
+    <ion-label position="floating">Expense</ion-label>
+    <ion-input type="text" [(ngModel)]="expense.expense" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Category</ion-label>
+    <ion-select value="category"[(ngModel)]="expense.category" required>
+      <ion-select-option value="food">Food</ion-select-option>
+      <ion-select-option value="groceries">Grocery</ion-select-option>
+      <ion-select-option value="household">Household</ion-select-option>
+      <ion-select-option value="beauty">Beauty</ion-select-option>
+      <ion-select-option value="health">Health</ion-select-option>
+      <ion-select-option value="education">Education</ion-select-option>
+      <ion-select-option value="transportation">Transportation</ion-select-option>
+      <ion-select-option value="clothing">Clothing</ion-select-option>
+      <ion-select-option value="gift">Gift</ion-select-option>
+      <ion-select-option value="fitness">Fitness</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label >Amount</ion-label>
+    <ion-input type="number" placeholder="0" [(ngModel)]="expense.amount" required>RM</ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label >Date</ion-label>
+    <ion-input type="date" [(ngModel)]="expense.date" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Note</ion-label>
+    <ion-input type="text" [(ngModel)]="expense.note" required></ion-input>
+  </ion-item>
+  
+  <ion-button (click)="updateExpense(expense)" expand="block" fill="solid" color="primary" shape="default">
+    UPDATE
+  </ion-button>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Copyright 2021</ion-title>
+  </ion-toolbar>
+</ion-footer>

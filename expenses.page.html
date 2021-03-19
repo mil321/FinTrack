@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <ion-title>Expenses</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]=true padding class="background">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['/add-expenses']" routerLinkActive="router-link-active" >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-card *ngFor="let expense of expenses" class="more">
+    <ion-card-header>
+      <ion-card-subtitle>{{ expense.category }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ expenses.expense }}</p>
+      <p>RM {{ expense.amount }}</p>
+      <p>{{ expense.date }}</p>
+      <p>{{ expense.note }}</p>
+    </ion-card-content>
+    <ion-button (click)="deleteExpense(expense.id)" fill="clear" shape="round">
+      Delete
+    </ion-button>
+    <ion-button [routerLink]="['/edit-expenses',expense.id]" routerLinkActive="router-link-active" fill="clear" >
+      Edit
+    </ion-button>
+
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Copyright 2021</ion-title>
+  </ion-toolbar>
+</ion-footer>
